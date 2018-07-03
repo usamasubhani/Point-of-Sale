@@ -1,0 +1,57 @@
+﻿<Window x:Class="POS_2.RootMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_2"
+        mc:Ignorable="d"
+        Title="Menu" WindowState="Maximized" Closing="Window_Closing" Background="#FF242729">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources >
+            <Style TargetType="Border" >
+                <Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
+        </Grid.Resources>
+
+        <Border Grid.Row="1" Grid.Column="1">
+            <Button x:Name="AddUsrBtn" Click="AddUsrBtn_Click" Background="#FF1E8015">Add User</Button>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="2">
+            <Button x:Name="MngStcBtn" Click="MngStcBtn_Click" Background="#FF21438B">Manage Stock</Button>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="3">
+            <Button x:Name="POSbtn" Click="POSbtn_Click" >POS</Button>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="1">
+            <Button x:Name="ViewAllBtn1" Click="ViewAllBtn_Click"  Background="Brown"></Button>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="2">
+            <Button x:Name="ViewAllBtn2" Click="ViewAllBtn_Click" Background="Azure"></Button>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="3">
+            <Button x:Name="ViewAllBtn3" Click="ViewAllBtn_Click" Background="CornflowerBlue" ></Button>
+        </Border>
+    </Grid>
+</Window>

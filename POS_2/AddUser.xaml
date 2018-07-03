@@ -1,0 +1,22 @@
+﻿<Window x:Class="POS_2.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_2"
+        mc:Ignorable="d"
+        Title="AddUser" Height="436.212" Width="368.524" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="nameTxtBox" HorizontalAlignment="Left" Height="23" Margin="153,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="usernameTxtBox" HorizontalAlignment="Left" Height="23" Margin="153,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="65,67,0,0" VerticalAlignment="Top"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="44,126,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="48,195,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="72,259,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="typeCombo" HorizontalAlignment="Left" Margin="153,263,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="pswdBox" HorizontalAlignment="Left" Margin="153,195,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="261,362,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="169,362,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="POS_2.StockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_2"
+        mc:Ignorable="d"
+        Title="StockWindow" WindowState="Maximized" Loaded="Window_Loaded" Closed="Window_Closed" Background="#FF3E3E3E">
+    <Grid  FocusManager.FocusedElement="{Binding ElementName=SearchBox}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources >
+            <Style TargetType="Border" >
+                <Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
+        </Grid.Resources>
+
+        <Border Grid.Row="2" Grid.Column="1">
+            <Button x:Name="Add_Btn" Click="AddButton_Click" Background="#FF2F9E1D">Add</Button>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1">
+            <Button x:Name="Update_Btn" Click="Update_Btn_Click" Background="#FF11438D">Update</Button>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="1">
+            <Button x:Name="Delete_Btn" Click="Delete_Btn_Click" Background="#FFC71D1D">Delete</Button>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="3">
+            <TextBox x:Name="SearchBox" MaxHeight="30" TextWrapping="Wrap"  TextChanged="TextBox_TextChanged" Margin="5,19,5,5" Background="#FFE2E2E2"/>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  Grid.RowSpan="3">
+            <DataGrid x:Name="dataGrid1" CanUserAddRows="False" IsReadOnly="True">
+                <DataGrid.BindingGroup>
+                    <BindingGroup/>
+                </DataGrid.BindingGroup>
+            </DataGrid>
+        </Border>
+
+
+    </Grid>
+</Window>

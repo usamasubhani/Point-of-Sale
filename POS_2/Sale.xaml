@@ -1,0 +1,100 @@
+﻿<Window x:Class="POS_2.Sale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS_2"
+        mc:Ignorable="d"
+        Title="Sale" Height="439.234" Width="666.028" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.Resources >
+            <Style TargetType="Border" >
+                <Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
+        </Grid.Resources>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="7">
+            <DataGrid Name="currentSale" ></DataGrid>
+        </Border>
+
+        <Border Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <GroupBox>Total etc</GroupBox>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1">
+            <TextBox>Keypad Input</TextBox>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="4">
+            <Label>Keypad</Label>
+        </Border>
+        
+        <Border Grid.Row="0" Grid.Column="2">
+            <TextBox>Search product to add</TextBox>
+        </Border>
+
+        
+        
+        <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="6">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0">
+                    <Button>Most</Button>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1">
+                    <Button>Used</Button>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="2">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="2">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="0">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="1">
+                    <Button></Button>
+                </Border>
+                <Border Grid.Row="2" Grid.Column="2">
+                    <Button></Button>
+                </Border>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
