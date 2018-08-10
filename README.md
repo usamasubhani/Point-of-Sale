@@ -9,5 +9,7 @@ The main hurdle in completing this project is that I moved to linux. I made it p
 
 # Screenshots
 ![Login](img/login.png)
+
 ![Stock](img/stock.png)
+
 ![user](img/user.png)
