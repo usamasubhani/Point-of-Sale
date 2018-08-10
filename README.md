@@ -8,8 +8,9 @@ The main hurdle in completing this project is that I moved to linux. I made it p
 - [ ] Clean code.
 
 # Screenshots
-![Login](img/login.png)
 
-![Stock](img/stock.png)
+![Login](img/login.PNG)
 
-![user](img/user.png)
+![Stock](img/stock.PNG)
+
+![user](img/user.PNG)
