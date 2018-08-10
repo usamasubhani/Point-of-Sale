@@ -48,7 +48,8 @@ namespace POS_2
 
         private void ViewAllBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Sale sale = new Sale();
+            sale.ShowDialog();
         }
 
         private void ViewAllBtn_Click_1(object sender, RoutedEventArgs e)

@@ -167,5 +167,10 @@ namespace POS_2
             if(!isRoot) //if not logged in as root logout of session
                 LoginWindow.signedIn = false;
         }
+
+        private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

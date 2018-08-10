@@ -46,7 +46,7 @@
         </Border>
 
         <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  Grid.RowSpan="3">
-            <DataGrid x:Name="dataGrid1" CanUserAddRows="False" IsReadOnly="True">
+            <DataGrid x:Name="dataGrid1" CanUserAddRows="False" IsReadOnly="True" SelectionChanged="dataGrid1_SelectionChanged">
                 <DataGrid.BindingGroup>
                     <BindingGroup/>
                 </DataGrid.BindingGroup>

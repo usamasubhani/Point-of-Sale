@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS_2"
         mc:Ignorable="d"
-        Title="Sale" Height="439.234" Width="666.028" WindowState="Maximized">
+        Title="Sale" Height="439.234" Width="666.028" WindowState="Maximized" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4*"></ColumnDefinition>
-            <ColumnDefinition Width="4*"></ColumnDefinition>
-            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="199*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="220*"></ColumnDefinition>
+            <ColumnDefinition Width="219*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -31,70 +32,92 @@
             </Style>
         </Grid.Resources>
 
-        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="7">
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="2">
             <DataGrid Name="currentSale" ></DataGrid>
         </Border>
 
-        <Border Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+        <Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
             <GroupBox>Total etc</GroupBox>
         </Border>
-        <Border Grid.Row="2" Grid.Column="1">
+        <Border Grid.Row="2" Grid.Column="2">
             <TextBox>Keypad Input</TextBox>
         </Border>
-        <Border Grid.Row="3" Grid.Column="1" Grid.RowSpan="4">
-            <Label>Keypad</Label>
-        </Border>
-        
-        <Border Grid.Row="0" Grid.Column="2">
-            <TextBox>Search product to add</TextBox>
+        <Border Grid.Row="3" Grid.Column="2" Grid.RowSpan="4">
+            <DataGrid></DataGrid>
         </Border>
 
-        
-        
-        <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="6">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                    <ColumnDefinition Width="1*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="1*"></RowDefinition>
-                    <RowDefinition Height="1*"></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <Border Grid.Row="0" Grid.Column="0">
-                    <Button>Most</Button>
-                </Border>
-                <Border Grid.Row="0" Grid.Column="1">
-                    <Button>Used</Button>
-                </Border>
-                <Border Grid.Row="0" Grid.Column="2">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="1" Grid.Column="0">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="1" Grid.Column="1">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="1" Grid.Column="2">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="2" Grid.Column="0">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="2" Grid.Column="1">
-                    <Button></Button>
-                </Border>
-                <Border Grid.Row="2" Grid.Column="2">
-                    <Button></Button>
-                </Border>
-            </Grid>
+        <Border Grid.Row="7" Grid.Column="2" Grid.RowSpan="1">
+            <Button Name="payBtn">Pay</Button>
         </Border>
+
+
+
+
+        
+        <TabControl Grid.Row="0" Grid.Column="3" Grid.RowSpan="7">
+            <TabItem Header="Search">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="15*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBox Name="searchBox" Grid.Row="0" TextChanged="TextBox_TextChanged"></TextBox>
+                    <DataGrid x:Name="dataGrid1" CanUserAddRows="False" IsReadOnly="True" Grid.Row="1" PreviewKeyDown="dataGrid1_PreviewKeyDown" >
+                        <DataGrid.BindingGroup>
+                            <BindingGroup/>
+                        </DataGrid.BindingGroup>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Most Used">
+                <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="6">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" Grid.Column="0">
+                            <Button>Most</Button>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1">
+                            <Button>Used</Button>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="2">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="0">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="1">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="2">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="0">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="1">
+                            <Button></Button>
+                        </Border>
+                        <Border Grid.Row="2" Grid.Column="2">
+                            <Button></Button>
+                        </Border>
+                    </Grid>
+                </Border>
+            </TabItem>
+        </TabControl>
+
 
     </Grid>
 </Window>
